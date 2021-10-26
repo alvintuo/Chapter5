@@ -1,4 +1,5 @@
 package EX51;
+import java.util.Scanner;
 
 public class exercise51 {
     /*
@@ -13,16 +14,20 @@ public class exercise51 {
      */
 
     public static void main(String[] args) {
-        int year = 400;
+        int year;
+
+        Scanner input = new Scanner(System.in);
+        year = input.nextInt();
+
         boolean is100 = false, is400 = false, is4 = false;
 
-        if ((year%100) == 0) {
+        if ((year % 100) == 0) {
             is100 = true;
         }
         if ((year % 400) == 0){
             is400 = true;
         }
-        if((year%4) == 0) {
+        if((year % 4) == 0) {
             is4 = true;
         }
 
