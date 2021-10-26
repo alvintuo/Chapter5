@@ -1,7 +1,6 @@
 package EX52;
 import java.util.Scanner;
 
-public class exercise52 {
     /*
     Exercise 5.1 Prompt
     Design and implement an application that reads an integer value representing a year from
@@ -17,6 +16,8 @@ public class exercise52 {
     the user to terminate the program using an appropriate sentinel value. Validate each input value
     to ensure it is greater than or equal to 1582.
      */
+
+public class exercise52 {
 
     public static void main(String[] args) {
         int index = 0, numEntries, year;

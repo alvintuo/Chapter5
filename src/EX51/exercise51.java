@@ -1,7 +1,6 @@
 package EX51;
 import java.util.Scanner;
 
-public class exercise51 {
     /*
     Exercise 5.1 Prompt
     Design and implement an application that reads an integer value representing a year from
@@ -12,6 +11,9 @@ public class exercise51 {
     because even though it is divisible by 100, it is also divisible by 400. Produce an error message
     for any input value less than 1582 (the year the Gregorian calendar was adopted).
      */
+
+public class exercise51 {
+
 
     public static void main(String[] args) {
         int year;
