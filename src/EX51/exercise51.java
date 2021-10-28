@@ -21,6 +21,11 @@ public class exercise51 {
         Scanner input = new Scanner(System.in);
         year = input.nextInt();
 
+        if (year < 1582) {
+            System.out.println("ERROR: This year is less than 1582.");
+            System.exit(0);
+        }
+
         boolean is100 = false, is400 = false, is4 = false;
 
         if ((year % 100) == 0) {
