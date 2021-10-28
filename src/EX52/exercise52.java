@@ -42,6 +42,10 @@ public class exercise52 {
             if ((year % 4) == 0) {
                 is4 = true;
             }
+            if (year < 1582) {
+                System.out.println("ERROR: This year is less than 1582, stopping program...");
+                System.exit(0);
+            }
 
             if (is400) {
                 System.out.println("The year " + year + " is a leap year");
@@ -50,6 +54,7 @@ public class exercise52 {
             } else {
                 System.out.println("The year " + year + " is NOT a leap year");
             }
+
             index++;
         }
     }
