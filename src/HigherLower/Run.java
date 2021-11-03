@@ -1,19 +1,18 @@
 package HigherLower;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Run {
 
     public static void main(String[] args) {
-        boolean play = false;
-        while (play = true) {
+        boolean play = true;
+        while (play) {
             int attempts = 0;
             System.out.println("Welcome to the Higher or Lower game. Please enter a valid integer between 0 and 100.");
             boolean didWin = false;
             HiLo hilo = new HiLo();
             hilo.generateRdm();
 
-            while (didWin == false) {
+            while (!didWin) {
 
                 Scanner num = new Scanner(System.in);
                 int in = num.nextInt();
@@ -25,10 +24,19 @@ public class Run {
                     System.out.println("Play again? (Y/N)");
                     Scanner question = new Scanner(System.in);
                     String q = question.nextLine();
-                    q.toLowerCase();
-                    if (q == "y") play = true;
-                    else if (q == "n") play = false;
-                    else System.out.println("Error: Invalid input.");
+                    String s = q.toLowerCase();
+
+                    if (s.equals("n")) {
+                        play = false;
+                    }
+                    else if (s.equals("y")) {
+                        play = true;
+                    }
+                    else {
+                        System.out.println("Error: Invalid input.");
+                        System.exit(0);
+                    }
+
                     didWin = true;
                 }
 
